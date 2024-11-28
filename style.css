@@ -1,0 +1,326 @@
+    @font-face{
+        font-family: 'myfont';
+        src: url('fonts/Qs_Iranyekan.ttf') format('truetype');
+    }
+    
+    
+
+/* 
+---01 TYPOGRAFY SYSTEM 
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+Font weight (px): 400
+
+line height:
+default: 1
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+color:
+primary:
+Tints:
+Shades:
+Accents:
+greys:
+
+
+
+----Shadows
+
+
+-----Border-redius
+
+----WHitespace
+
+---- spacing system
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'IBM Plex Sans Arabic', sans-serif; 
+    text-align: right;
+    min-height: 100vh;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    /* background: linear-gradient(90deg,#e2e2e2, #c9d6ff) */
+
+  }
+  header{
+    padding:0 9rem;
+    width: 100%;
+    height: 14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 1px 0   rgba(0, 0,0 , 0.1);
+  }
+
+
+  header .search-box{
+    flex: 1;
+  position: relative;
+  transform: translateY(-0.5rem);
+    }
+
+  .search-box input{
+    margin-right: 2rem;
+    right: -50rem;
+    width: 42%;
+    height: 5rem;
+    border: none;
+    outline: none;
+    background-color: #eee;
+    border-radius: 1rem;
+    color: gray;
+    font-size: 1.6rem;
+    padding-right:3rem;
+}
+
+.logo img{
+    position: relative;
+    width: 20rem;
+    margin-right: 4rem;
+}
+  .search-box i {
+    position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #888;
+ }
+
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    /* margin-left: 25rem; */
+   
+}
+
+.log-icon{
+   font-family: 'myfont';
+   font-weight: 500;
+    border: 1px solid #d6d6d6 ;
+    padding: .7rem;
+    border-radius: 8px;
+    
+}
+.log-icon i{
+    font-size: 1.7rem;
+    transform: translateY(0.3rem);
+}
+.log-icon a{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* sapn-registerand input */
+span{
+  padding: 1rem;
+    color: #d8d6d6;
+}
+.bx-basket{
+    color: #333;
+} 
+
+/*///navigation////*/
+.nav {
+    /* max-width: 1200px;*/
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    gap: 3rem; 
+   position: relative;
+    padding: 0 9rem;
+    position: absolute;
+    right: 0rem;
+    top: 11rem;
+    /* left: 15rem; */
+    bottom: 0; 
+    width: 100%; 
+    z-index: 10; 
+    font-family: 'myfont'; 
+    max-width: 1670px;
+    display: flex;
+   padding-left: 0;
+    margin-left: 0;
+    margin-right: 6rem;
+  }
+  
+  .nav__links {
+    list-style: none; 
+    display: flex; 
+    gap: 3.5rem; 
+    padding: 0; 
+    margin: 0;
+   
+  }
+
+  .nav__links  li:first-child a{
+    color: black;
+    padding: 0  0.5rem ;
+    /* border-left:1px solid#eee; */
+  }
+
+  .first-item li{
+    color: black;
+    padding: 0  0.5rem ;
+    border-left:1px solid#d4d4d4;
+    cursor: pointer;
+  }
+  
+  .location-nav{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   list-style: none;
+   position: relative;
+   top: 5.5rem;
+   right: -9.5rem;
+   font-size: 1.2rem;
+   font-family: 'myfont';
+  }
+
+  .location-nav a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  .location-nav i{
+    font-size: 1.6rem;
+  }
+  
+  .nav__items {
+    font-size: 1.2rem; 
+    font-weight: 400; 
+    
+    position: relative;
+  }
+  
+ 
+  .nav__items a {
+    text-decoration: none; 
+    color: #62666d;
+    position: relative;
+  }
+  
+  
+  .nav__items a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px; /* ضخامت خط */
+    background-color: red; /* رنگ خط */
+    width: 100%;
+    transform: scaleX(0); /* خط در ابتدا پنهان است */
+    transform-origin: left; /* مبدا پیش‌فرض */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav__items a[data-direction="right"]::before {
+    transform-origin: right; /* مبدا انیمیشن از راست */
+  }
+  
+  .nav__items a:hover::before {
+    transform: scaleX(1); /* نمایش کامل خط */
+  }
+
+
+   .nav__links i{
+    font-size: 1.7rem;
+    position: absolute;
+    top: -0.2rem;
+    right: -2rem;
+ 
+   }
+   
+
+  
+  .nav__items:nth-child(6)::after {
+    content:'';
+    border-left: 1px solid #d4d4d4;;
+    position: absolute;
+    left: -2rem;
+    height: 100%;
+  }
+  
+  .hidden{
+    visibility: hidden;
+}
+
+
+.location-delivery{
+position: absolute;
+list-style: none;
+transform: translateY(5rem);
+background-color: #f7eee7;
+padding:.5rem 2rem;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.8rem;
+
+}
+
+.location-delivery a {
+    font-family: 'myfont';
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #f57f17;;
+}
+.location-delivery i{
+  color: #f57f17;
+}
+.tooltip {
+    display: inline-block; /* برای تطبیق اندازه با متن */
+    background-color: #2c2f5b; /* رنگ پس‌زمینه (مطابق تصویر) */
+    color: #fff; /* رنگ متن */
+    padding: 1.5rem 1.5rem; /* فاصله داخلی */
+    border-radius: 0.5rem; /* گرد کردن گوشه‌ها */
+    font-size: 1rem; /* اندازه متن */
+    font-family: "myfont", sans-serif; /* فونت فارسی */
+    text-align: center; /* مرکز چین کردن متن */
+    position: relative; /* برای اضافه کردن مثلث */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* سایه برای جذابیت */
+    top: 14rem;
+    right: 155rem ;
+  }
+  
+  /* طراحی مثلث پایین */
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 40px; /* تنظیم موقعیت مثلث */
+    left: 50%; /* مرکز چین کردن */
+    transform: translateX(-50%); /* انتقال برای مرکز شدن */
+    border-width: 5px; /* اندازه مثلث */
+    border-style: solid;
+    border-color: transparent transparent #2c2f5b transparent; /* فقط پایین رنگ دارد */
+    transform: translateY(0rem);
+  }
+
+  /* ************ */
+/* hidden SECTION */
+/* ************ */
