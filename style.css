@@ -277,7 +277,7 @@ span{
 .tooltip {
   max-width: 34rem;
   position: absolute;
-  top: 4rem; /* موقعیت زیر انتخاب شهر */
+  top: 11rem; /* موقعیت زیر انتخاب شهر */
   left: 11%; /* تراز وسط */
   transform: translateX(-50%);
   background-color: #2c2f5b;
@@ -305,13 +305,7 @@ span{
  /* ************ */
  /* hidden SECTION */
  /* ************ */
-  .section-hidden{
-  position: relative;
-  padding: 2rem 0;
-   /* background-color: #fdf2e9; */
  
- }
-
  .location-delivery{
   display: flex;
   align-items: center;
@@ -320,7 +314,7 @@ span{
   position: absolute; /* موقعیت‌دهی مطلق */
   bottom: 100%; /* انتقال به بالای نوار آبی */
   right: 84%;
-  top: 0.8rem; /* هم‌ترازی با سمت راست */
+  top: 7.5rem; /* هم‌ترازی با سمت راست */
   background-color: #fff; /* رنگ پس‌زمینه اختیاری */
   padding: 1.5rem 2rem; /* فضای داخلی */
   border-radius: 0.5rem; /* گوشه‌های گرد */
@@ -331,121 +325,95 @@ span{
   
   }
   
+
+ .location-delivery a {
+  text-decoration: none;
+  color: #f57f17;;
+}
+.location-delivery i{
+color: #f57f17;
+}
+.lc{
+width: 20rem;
+}
+.mainsub{
+width: 20rem;
+height: 60vh;
+/* background-color: #fff; */
+transform: translate(-13rem);
+background-color: #eee;
+border-radius: 5px;
+
+}
+
+.sub-nav{
+  max-height: 53.1vh;
+  margin-top: 2rem;
+  margin-right: 13rem;
+  max-width: 50%;
+  display: grid;
   
-  
-  .location-delivery a {
-      text-decoration: none;
-      color: #f57f17;;
-  }
-  .location-delivery i{
-    color: #f57f17;
-  }
- .lc{
-  width: 20rem;
- }
- .mainsub{
-   width: 20rem;
-   height: 60vh;
-   /* background-color: #fff; */
-   transform: translate(-13rem);
-   background-color: #eee;
+  grid-template-columns: 200px 1fr;
   
  }
+
+.main-links{
+  max-height: 50%;
+  overflow: scroll;
+  direction: ltr;
+  list-style: none;
+  overflow-x: hidden;
+  background-color: #eee;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.main-links a{
+  display: block; /* این ویژگی باعث می‌شود که لینک کل فضای داخل li را بگیرد */
+  text-decoration: none;
+  padding-right: 2rem;
+  font-family: 'myfont';
+  color: #2c2f5b;
+}
+
+.main-items{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
  
- .main-links{
-   max-height: 100%;
-   display: flex;
-   flex-direction: column;
-   list-style: none;
-   font-size: 1.2rem;
-   font-family: 'myfont';
-   overflow-y: scroll;
-   overflow-x: hidden;
-   direction: ltr;
+}
+
+
+.main-links li:hover{
+  background-color: #fff;
  }
- .main-links li{
-   padding-top: 2rem;
-   padding-bottom: 2rem;
- }
- .main-links li:last-child{
-   padding-top: 2rem;
-   padding-bottom: 1rem;
- }
+
+ .main-links li:hover a {
+  color: red; /* تغییر رنگ متن در زمان hover */
+}
+
+
+.second-list a{
+    text-decoration: none;
+    padding-right: 2rem;
+    font-family: 'myfont';
+    color: #2c2f5b;
+    
+}
+
+.second-list{
+  max-height: 50%;
+  overflow: scroll;
+  overflow-x: hidden;
+  direction: ltr;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 12px;
+}
+.second-list li{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  list-style: none;
+  background:#fff;
  
- .main-links li:first-child{
-   background-color: #fff;
- }
- 
- .main-items i{
-   padding-right: 1rem;
- }
- .main-items a{
-   
-   color: black;
-   text-decoration: none;
-   
- }
- 
- .main-items:hover {
-   background-color: #fff;
- }
- 
- .main-items:hover a {
-   color: red; /* تغییر رنگ متن */
- }
- 
- .main-items:hover i {
-   color: red; /* تغییر رنگ آیکون */
- }
- 
- .side-sub-nav{
-   width: 50%;
-   height: 70%;
-   top: -45;
-   background-color: #fff;
-   transform: translate(-33rem,-70.5rem);
-   
- }
- 
- .sub-header-txt{
-   position: relative;
-   top: 1rem;
-   right: 0rem;
-   color: #008eb2;
-   font-family: 'myfont';
-   font-size: 1.3rem;
-   text-decoration: none;
-   font-weight: 600;
- }
- .side-items:not(:first-child) a {
-   color: #2c2f5b; /* رنگ جدید */
- }
- 
- .main-links a{
-   text-decoration: none;
-   
- }
- .side-items {
-   padding-right: 2rem;
-   text-decoration: none;
-   color: #2c2f5b;
- 
- }
- 
- .side-items a:hover{
-   color: red;
- }
- 
- .side-items:nth-child(2){
-   font-weight: 600;
-   position: relative;
-   right: -2rem;
- }
- 
- 
- .side-items span{
-   color: red;
-   font-size: large;
-   font-weight: 600;
- } 
- 
+}
+
+
+
