@@ -563,7 +563,17 @@ border-radius: 5px;
   cursor: pointer;
   color: black;
  }
- 
+ @media (max-width: 1024px) {
+  .swiper-img {
+    margin-top: 5rem; /* مقدار جدید برای فاصله بالای swiper */
+  }
+
+  .btn-left,
+  .btn-right {
+    top: 3rem; /* مقدار جدید برای دکمه‌ها */
+  }
+}
+
  /* ************ */
  /* banner SECTION */
  /* ************ */
@@ -603,17 +613,16 @@ border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-    position: absolute;
-    bottom: 25%;
-    transform: translateY(-50%);
+  position: absolute;
+  bottom: 25%;
+  transform: translateY(-50%);
 }
 
 .btn--banner-left {
-  
-    left: 180rem; /* یا هر مقدار مناسب */
+  left: 85%; /* تغییر اندازه برای مناسب شدن */
 }
 
 .btn--banner-right {
-  
-    right: 16rem; /* یا هر مقدار مناسب */
+  right: 5%; /* تغییر اندازه برای مناسب شدن */
 }
+
