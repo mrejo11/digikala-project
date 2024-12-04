@@ -4,6 +4,10 @@ const menu = document.querySelector(".main-links");
 const subMenu = document.querySelector(".second-list");
 const trigger = document.querySelector(".first-item");
 const hiddenMenu = document.querySelector(".sub-nav");
+const swiper = document.querySelector(".swiper-img");
+const slides = document.querySelectorAll(".slide");
+const btnRight = document.querySelector(".btn-right");
+const btnLeft = document.querySelector(".btn-left");
 
 document.querySelectorAll(".nav__items a").forEach((link) => {
   link.addEventListener("mouseenter", (e) => {
@@ -27,40 +31,69 @@ locationdelivery.addEventListener("mouseout", () =>
   toolTip.classList.add("hidden")
 );
 
-
 //hidden menu
+const movement = 10;
 trigger.addEventListener("mouseover", () => {
-  menu.classList.remove("hidden");
+  menu.classList.remove("hidden"), subMenu.classList.remove("hidden");
 });
 
-menu.addEventListener("mouseover", () => {
-  subMenu.classList.remove("hidden");
-});
-
-[menu, subMenu].forEach((el) => {
+[trigger, menu, subMenu].forEach((el) => {
   el.addEventListener("mouseout", (e) => {
     const rectMenu = menu.getBoundingClientRect();
-    
     const rectSubMenu = subMenu.getBoundingClientRect();
+    const recttrigger = trigger.getBoundingClientRect();
+    console.log(rectMenu);
+    console.log(recttrigger);
+
     const mouseX = e.clientX;
     const mouseY = e.clientY;
+    console.log(mouseY);
 
     const isoutmenu =
-      mouseX < rectMenu.left ||
-      mouseX > rectMenu.right ||
-      mouseY < rectMenu.top ||
-      mouseY > rectMenu.bottom;
-
+      mouseX <= rectMenu.left ||
+      mouseX >= rectMenu.right ||
+      mouseY <= rectMenu.top ||
+      mouseY >= rectMenu.bottom;
     const isOutSubMenu =
-      mouseX < rectSubMenu.left ||
-      mouseX > rectSubMenu.right ||
-      mouseY < rectSubMenu.top ||
-      mouseY > rectSubMenu.bottom;
-    if (isoutmenu && isOutSubMenu) {
+      mouseX <= rectSubMenu.left ||
+      mouseX >= rectSubMenu.right ||
+      mouseY <= rectSubMenu.top ||
+      mouseY >= rectSubMenu.bottom;
+
+    const isOutTrigger =
+      mouseX <= recttrigger.left ||
+      mouseX >= recttrigger.right ||
+      mouseY <= recttrigger.top;
+    mouseY >= rectSubMenu.bottom;
+    if (isoutmenu && isOutSubMenu && isOutTrigger) {
       menu.classList.add("hidden");
       subMenu.classList.add("hidden");
     }
   });
 });
 
+// //slider
+// slides.forEach((s,i)=>s.style.transform=`translateX(${100*i}%)`)
+
+
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${20 * (i - slide)}%)`)
+  );
+};
+goToSlide(0);
+
+let curSlide = 0;
+const maxslide = slides.length;
+btnRight.addEventListener("click", ()=> {
+  curSlide === maxslide ? (curSlide = 0) : curSlide++;
+
+  goToSlide(curSlide);
+});
+
+btnLeft.addEventListener("click", ()=> {
+  curSlide === 0 ? (curSlide = maxslide-1) : curSlide--;
+
+  goToSlide(curSlide)
+});
 
