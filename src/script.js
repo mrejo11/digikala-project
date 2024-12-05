@@ -23,13 +23,13 @@ document.querySelectorAll(".nav__items a").forEach((link) => {
   });
 });
 
-locationdelivery.addEventListener("mouseover", () =>
-  toolTip.classList.remove("hidden")
-);
+// locationdelivery.addEventListener("mouseover", () =>
+//   toolTip.classList.remove("hidden")
+// );
 
-locationdelivery.addEventListener("mouseout", () =>
-  toolTip.classList.add("hidden")
-);
+// locationdelivery.addEventListener("mouseout", () =>
+//   toolTip.classList.add("hidden")
+// );
 
 //hidden menu
 const movement = 10;
@@ -97,3 +97,42 @@ btnLeft.addEventListener("click", ()=> {
   goToSlide(curSlide)
 });
 
+
+// slider banner
+let curSlideBanner=0;
+
+
+const sliderBanner=document.querySelectorAll('.slider-banner')
+const containerBanner=document.querySelector('.container-banner')
+
+const goToSlideBanner = function (slide) {
+  sliderBanner.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+goToSlideBanner(0);
+
+  //  containerBanner.style.transform='scale(0.5)'
+  // containerBanner.style.overflow='visible'
+
+  sliderBanner.forEach(
+   (s, i) => (s.style.transform = `translateX(${100*i}%)`)
+ );
+
+const btnBannrLeft=document.querySelector('.btn--banner-left')
+const btnBannerRight=document.querySelector('.btn--banner-right')
+
+const maxslideBanner=sliderBanner.length;
+ 
+btnBannerRight.addEventListener("click", ()=> {
+  curSlideBanner === maxslideBanner-1 ? (curSlideBanner = 0) : curSlideBanner++;
+
+  goToSlideBanner(curSlideBanner);
+});
+
+btnBannrLeft.addEventListener("click", ()=> {
+  curSlideBanner === 0 ? (curSlideBanner = maxslideBanner-1) : curSlideBanner--;
+  
+
+  goToSlideBanner(curSlideBanner)
+});
