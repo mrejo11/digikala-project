@@ -56,6 +56,7 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #555;
+    overflow-x: hidden;
     /* background: linear-gradient(90deg,#e2e2e2, #c9d6ff) */
 
   }
@@ -582,7 +583,7 @@ border-radius: 5px;
  
  .slider-banner {
    display: flex;
-  position: fixed;
+  position: absolute;
   transition: 1s ease-in-out;
   
  }
@@ -703,3 +704,233 @@ text-align: center;
   height: 6rem;
 }  
 
+/* *****************************/
+ /* swiper-suprised  SECTION */
+ /* ****************************/
+
+ .swiper-suprised{
+  margin: 0 auto;
+  max-width: 140rem;
+ }
+
+ .swiper-sup{
+  height: 29.4rem ;
+  padding-top: 20px ;
+  padding-bottom: 20px ;
+  background-color: #df384e;
+  border-radius: 16px;
+  margin-bottom:2rem ;
+  
+ 
+ }
+
+ .swiper-wrapper{
+  background-color: #b4b4b4;
+  height: 25.4rem;
+  display: flex;
+  gap: 1rem;
+  background-color: #df384e;
+  overflow: hidden;
+ }
+
+ .wrapper-container
+ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 25.4rem;
+  width: 16.6rem;
+  background-color: #df384e;
+ }
+
+ .card:first-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #df384e;
+  padding-right: 1rem;
+  
+ }
+ .card > a{
+  text-decoration: none;
+  color: #fff;
+ }
+
+ .box p{
+  font-size: 2.5rem;
+  font-weight: 500;
+  
+  
+ }
+
+ .card:nth-child(2){
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+ }
+
+ .card:nth-child(13){
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+ }
+
+ .inputNumb {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+ }
+
+
+ .input-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+ }
+
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 150px;
+  height:254px;
+  background-color: #fff;
+  padding-left: 2rem;
+  transition: 1s ease-in-out;
+}
+.card img{
+width: 50%;
+height: 50%;
+}
+
+.card p{
+ font-family: 'myfont';
+}
+
+.card div{
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.card del{
+  font-size: 1.5rem;
+}
+
+.card span{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 8rem; 
+  top: 1rem;
+  transform: translateX(0); 
+  
+  text-align: right;
+  
+  background-color: red;
+  width: 3rem;
+  height: 2.3rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.sup-ri{
+  transform: translate(30rem,10rem);
+  border: 1px solid #888;
+}
+
+.sup-le{
+  transform: translate(-30rem,10rem);
+  display: none;
+}
+
+/* banner-container */
+.banner-container{
+ margin: 0 auto;
+ max-width: 140rem;
+ 
+}
+
+
+.container-baner{
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  
+   margin-bottom: 2rem;
+   
+
+}
+
+.container-baner img{
+  border-radius: 16px;
+}
+
+.digi-link-market{
+  margin: 0 auto;
+  max-width: 140rem;
+  background: linear-gradient(0.25turn, #ebf8e1, #ebf8e1, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 10rem;
+  border-radius: 12px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.digi-link-market span{
+  position: absolute;
+  color: #05ba58;
+  background-color: #fff;
+  font-size: 1.3rem;
+  font-family: 'myfont';
+  padding: 1.5rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  left: 5rem;
+  top: 2rem;
+  border-radius: 30px;
+  
+}
+
+.digi-link-market i{
+  position: absolute;
+  left: 5rem;
+  top: 3rem;
+  font-size: 2rem;
+  color: #05ba58;
+}
+
+.new-text{
+  position: absolute;
+  color: #fff;
+  background-color: #05ba58;
+  font-size: 1.3rem;
+  font-family: 'myfont';
+  padding: 1.5rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  left: 86rem;
+  top: 2.7rem;
+  border-radius: 30px;
+}
