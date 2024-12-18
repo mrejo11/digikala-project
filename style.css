@@ -959,13 +959,20 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  max-width: 130rem;
+  border-radius: 15px; 
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10rem;
 }
 
 .topbrand-container{
  margin-top: 4rem;
+ 
 }
 
 .topbrand-container h3{
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -976,10 +983,35 @@ span {
 .bx-star{
   color: #f9bc00;
   margin-left: 1rem;
+ 
 }
 
 .brand{
-display: block;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 2rem;
+}
 
+.brand a{
+  padding: 2rem;
+  border-right: 0.5px solid #e8ecf7;
+  border-left: 0.5px solid #e8ecf7;
+}
 
+.brand img {
+  width: 10rem;
+  height: 10rem;
+}
+
+ .barnd-le {
+  position: absolute;
+  right: 30rem;
+  border: 1px solid #62666d;
+}
+
+.brand-ri{
+  position: absolute;
+  left: 30rem;
+  border: 1px solid #62666d;
 }
