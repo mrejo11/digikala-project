@@ -1129,28 +1129,32 @@ span {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   border-radius: 15px;
   margin-bottom: 2rem;
+  
 }
 .hot-sales {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .te {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
   overflow: hidden;
   max-width: 140rem;
   margin: 0 auto;
   direction: rtl;
+  
 }
 
-/* .test{
-  min-width: 363px;
-  min-height:363px ;
-} */
+.test{
+display: flex;
+gap: 38rem;
+
+
+}
 
 .hot-sales h2 {
   display: flex;
@@ -1158,6 +1162,7 @@ span {
   color: black;
   font-size: 2rem;
   font-weight: 400;
+  margin-bottom: 2rem;
 }
 
 .hot-sales i {
@@ -1167,9 +1172,13 @@ span {
 }
 
 .sales-container {
-  display: flex;
+  display: inline-block;
+  justify-content: right;
   margin: 0 auto;
   min-width: 330px;
+  transition: 1s ease;
+ 
+  
 }
 
 .sales-container a {
@@ -1195,7 +1204,7 @@ span {
   font-family: "myfont";
   font-size: 1rem;
   color: #2c2f5b;
-  padding: 4rem;
+  padding: 2rem;
   border-bottom: 1px solid #e8ecf7;
   line-height: 2;
 }
@@ -1204,18 +1213,18 @@ span {
   font-family: "myfont";
   font-size: 1rem;
   color: #2c2f5b;
-  padding: 4rem;
+  padding: 3rem;
   line-height: 2;
 }
 
 .hot-catri {
-  transform: translate(1rem, -20rem);
+  /* transform: translate(1rem, rem); */
   left: 30rem;
   border: 1px solid #62666d;
 }
 
 .hot-catle {
-  transform: translate(-1rem, -20rem);
+  /* transform: translate(-1rem, -20rem); */
   right: 30rem;
   border: 1px solid #62666d;
 }
