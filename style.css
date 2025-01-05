@@ -803,7 +803,7 @@ span {
 }
 
 .sup-ri {
-  transform: translate(30rem, 10rem);
+  transform: translateY(250%);
   border: 1px solid #888;
 }
 

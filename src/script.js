@@ -74,10 +74,10 @@ trigger.addEventListener("mouseover", () => {
 
 // //slider
 // slides.forEach((s,i)=>s.style.transform=`translateX(${100*i}%)`)
-slideWidth=100
+const slideWidths=129
 const goToSlide = function (slide) {
   slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${(i - slide) * slideWidth}px)`)
+    (s, i) => (s.style.transform = `translateX(${(i - slide) * slideWidths}px)`)
   );
 };
 goToSlide(5);
