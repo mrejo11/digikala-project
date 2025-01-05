@@ -1,6 +1,6 @@
 const brand = document.querySelectorAll(".brand a");
-const brandBtn = document.querySelector(".brand-ri"); // دکمه سمت راست
-const brandBtnLeft = document.querySelector(".barnd-le"); // دکمه سمت چپ
+const brandBtn = document.querySelector(".brand-ri");   
+const brandBtnLeft = document.querySelector(".barnd-le");   
 
 const brandWidth = 142;
 
@@ -21,32 +21,32 @@ const previousBrand = function () {
     curBrand--;
     goToBrand();
   }
-  // غیرفعال کردن دکمه چپ اگر به اولین کارت برسیم
+  // disable left button if we reach first card
   if (curBrand === 2) {
     brandBtnLeft.style.display = "none";
   }
-  // نمایش دکمه راست
+  // show right button
   brandBtn.style.display = "flex";
 };
 
-// حرکت به کارت بعدی (راست به چپ)
+
 const nextBrand = function () {
   if (curBrand < maxBrand) {
-    curBrand++; // حرکت به کارت بعدی
+    curBrand++; // move to next card
     goToBrand();
   }
-  // غیرفعال کردن دکمه راست اگر به آخرین کارت برسیم
+  
   if (curBrand === maxBrand) {
     brandBtn.style.display = "none";
   }
-  // نمایش دکمه چپ
+  
   brandBtnLeft.style.display = "flex";
 };
 
-// اتصال رویدادها به دکمه‌ها
-brandBtnLeft.addEventListener("click", previousBrand); // دکمه چپ برای حرکت به کارت قبلی
-brandBtn.addEventListener("click", nextBrand); // دکمه راست برای حرکت به کارت بعدی
 
-// نمایش و پنهان کردن دکمه‌ها هنگام بارگذاری
+brandBtnLeft.addEventListener("click", previousBrand); 
+brandBtn.addEventListener("click", nextBrand); 
+
+// when we first time load the page
 brandBtnLeft.style.display = "none";
 brandBtn.style.display = "flex";

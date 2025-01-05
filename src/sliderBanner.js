@@ -69,15 +69,15 @@ dotcontainer.addEventListener("click", (e) => {
   }
 });
 
-const autoSlideInterval = 5000; // زمان تغییر خودکار (۵ ثانیه)
+const autoSlideInterval = 5000; 
 let slideInterval = setInterval(nextSlide, autoSlideInterval);
 
-// توقف خودکار هنگام هاور
+// stop timer when mouse hover swiper
 containerBanner.addEventListener("mouseover", () => {
   clearInterval(slideInterval);
 });
 
-// بازگردانی خودکار هنگام ترک هاور
+
 containerBanner.addEventListener("mouseout", () => {
   slideInterval = setInterval(nextSlide, autoSlideInterval);
 });

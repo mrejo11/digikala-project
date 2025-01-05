@@ -3,7 +3,7 @@
 
 window.addEventListener('load', () => {
     const defaultInput = document.getElementById('user');
-    defaultInput.focus(); // فعال کردن فوکوس روی اینپوت
+    defaultInput.focus(); //enable focus on input element
 });
 
 window.addEventListener('load', () => {
