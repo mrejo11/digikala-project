@@ -54,3 +54,34 @@ btnRightSup.addEventListener("click", nextCard);
 // when first load bage we have==>>
 btnLeftSup.style.display = "none";  
 btnRightSup.style.display = "flex"; 
+
+
+
+//suprizedTimer
+const inputBoxes=document.querySelectorAll('.input-box')
+const setTime=600
+
+const startSuprizeTimer=()=>{
+   let time=setTime
+
+  //call timer every second
+  const timerInterval=setInterval(()=>{
+    if(time<0){
+      time=setTime
+    return;
+  }
+
+  const min=Math.floor(time/60);
+  const sec=time%60;
+//inEach call,print the remaining time to UI
+    inputBoxes[2].textContent=Math.floor(min/10)
+    inputBoxes[1].textContent=min%10<10?`0${min}`:min;
+    inputBoxes[0].textContent=sec<10?`0${sec}`:sec;
+
+    //decrese Is
+    time--;
+  },1000);
+};
+
+startSuprizeTimer()
+
