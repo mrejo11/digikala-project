@@ -80,7 +80,7 @@ const btnLeft = document.querySelector(".btn-left");
 const slideWidths = 129;
 
 
-let curSlide = 0; 
+let curSlide = 1; 
 const maxSlide = slides.length - 10;
 
 
