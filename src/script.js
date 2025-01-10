@@ -6,8 +6,7 @@ const trigger = document.querySelector(".first-item");
 const hiddenMenu = document.querySelector(".sub-nav");
 const swiper = document.querySelector(".swiper-img");
 const slides = document.querySelectorAll(".slide");
-const btnRight = document.querySelector(".btn-right");
-const btnLeft = document.querySelector(".btn-left");
+
 
 document.querySelectorAll(".nav__items a").forEach((link) => {
   link.addEventListener("mouseenter", (e) => {
@@ -72,27 +71,61 @@ trigger.addEventListener("mouseover", () => {
   });
 });
 
+
+
 // //slider
-// slides.forEach((s,i)=>s.style.transform=`translateX(${100*i}%)`)
-const slideWidths=129
+const btnRight = document.querySelector(".btn-right");
+const btnLeft = document.querySelector(".btn-left");
+
+const slideWidths = 129;
+
+
+let curSlide = 0; 
+const maxSlide = slides.length - 10;
+
+
 const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${(i - slide) * slideWidths}px)`)
   );
 };
-goToSlide(5);
 
-let curSlide = 0;
-const maxslide = slides.length;
-btnRight.addEventListener("click", () => {
-  curSlide === maxslide ? (curSlide = 0) : curSlide++;
 
-  goToSlide(curSlide);
-});
+goToSlide(curSlide);
 
-btnLeft.addEventListener("click", () => {
-  curSlide === 0 ? (curSlide = maxslide - 1) : curSlide--;
 
-  goToSlide(curSlide);
-});
+const previousSlides = function () {
+  if (curSlide > 0) {
+    curSlide--; 
+    goToSlide(curSlide);
+  }
+  
+  if (curSlide === 0) {
+    btnLeft.style.display = "none"; 
+  }
+ 
+  btnRight.style.display = "flex";
+};
+
+
+const nextSlides = function () {
+  if (curSlide < maxSlide) {
+    curSlide++; 
+    goToSlide(curSlide);
+  }
+  
+  if (curSlide === 8) {
+    btnRight.style.display = "none";
+  }
+  
+  btnLeft.style.display = "flex";
+};
+
+
+btnLeft.addEventListener("click", previousSlides); 
+btnRight.addEventListener("click", nextSlides);    
+
+// when first load bage we have==>>
+btnLeft.style.display = "none";  
+btnRight.style.display = "flex"; 
 
