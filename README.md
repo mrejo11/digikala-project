@@ -16,9 +16,11 @@
   
 ## 🚀 نحوه اجرا
 ۱. مخزن را کلون کنید:
+```
+از اینجا  Cd digikala-project https://github.com/mrejo11/digikala-project.git 
+```
                                                                                                                                                                                                                                                                             
-                                                                                                                                                                                                         https://github.com/mrejo11/digikala-project.git 
-                                                                                                                                                                                                         Cd digikala-project
+                                                                                                                                                                                                        
 
 دمو آنلاین <<==>> https://mehdi-v1-3-digi.netlify.app
 
