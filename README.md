@@ -18,7 +18,7 @@
 ۱. مخزن را کلون کنید:
 ```
 https://github.com/mrejo11/digikala-project.git
-Cd digikala-project
+cd digikala-project
 ```
                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                         
