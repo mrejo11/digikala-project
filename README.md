@@ -28,7 +28,34 @@
 
 
 
+# 🛒 Digikala Clone  
+
+A replica of Digikala's homepage and login page built with **HTML, CSS, and JavaScript**.  
+
+## ✨ Features  
+✅ Digikala-like design  
+✅ Desktop-friendly layout  
+✅ Homepage and Login Page  
+✅ Built with **pure HTML, CSS, and JavaScript**  
+
+## 🛠️ Technologies Used  
+- **HTML5** → For page structure  
+- **CSS3** → For styling  
+- **JavaScript (Vanilla JS)** → For basic interactivity  
+
+## 🚀 How to Run  
+1. Clone the repository:  
+
+git clone https://github.com/mrejo11/digikala-project.git
+cd digikala-project
 
 
+🔗 Live Demo
 
+[View Project 🚀](https://mehdi-v1-3-digi.netlify.app)
+
+👨‍💻 About Me
+Developed with ❤️ by Mehdi Rezaei
+📧 Email: mehdireko74@gmail.com
+📌 LinkedIn: Mehdi Rezaei
 
