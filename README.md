@@ -45,11 +45,10 @@ A replica of Digikala's homepage and login page built with **HTML, CSS, and Java
 
 ## 🚀 How to Run  
 1. Clone the repository:  
-
+```sh
 git clone https://github.com/mrejo11/digikala-project.git
 cd digikala-project
-
-
+```
 🔗 Live Demo
 
 [View Project 🚀](https://mehdi-v1-3-digi.netlify.app)
@@ -57,5 +56,5 @@ cd digikala-project
 👨‍💻 About Me
 Developed with ❤️ by Mehdi Rezaei
 📧 Email: mehdireko74@gmail.com
-📌 LinkedIn: Mehdi Rezaei
+📌 LinkedIn: [Mehdi Rezaei](https://www.linkedin.com/in/mehdi-rezaei-41304516a)
 
