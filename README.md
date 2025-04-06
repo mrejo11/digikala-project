@@ -26,11 +26,6 @@ cd digikala-project
 دمو آنلاین <<==>> https://mehdi-v1-3-digi.netlify.app
 
 
-## 👨‍💻 درباره من
-
-ساخته شده با ❤️ توسط مهدی https://github.com/mrejo11  
-📧 ایمیل: mehdireko74@gmail.com  
-📌 لینکدین: https://www.linkedin.com/in/mehdi-rezaei-41304516a
 
 
 
