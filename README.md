@@ -54,8 +54,5 @@ cd digikala-project
 
 [View Project 🚀](https://mehdi-v1-3-digi.netlify.app)
 
-👨‍💻 About Me
-Developed with ❤️ by Mehdi Rezaei
-📧 Email: mehdireko74@gmail.com
-📌 LinkedIn: [Mehdi Rezaei](https://www.linkedin.com/in/mehdi-rezaei-41304516a)
+
 
